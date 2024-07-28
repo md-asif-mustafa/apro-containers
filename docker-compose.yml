@@ -1,14 +1,14 @@
 version: '3.8'
 services:
-  aprodb:
+  vprodb:
     build: 
       context: ./Docker-files/db
     image: mdasif74/aprofiledb
-    container_name: aprodb
+    container_name: vprodb
     ports:
       - "3306:3306"
     volumes:
-      - aprodbdata:/var/lib/mysql
+      - vprodbdata:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=aprodbpass
 
@@ -44,6 +44,6 @@ services:
       - "80:80"
 
 volumes:
-   aprodbdata: {}
+   vprodbdata: {}
    aproappdata: {}
   
